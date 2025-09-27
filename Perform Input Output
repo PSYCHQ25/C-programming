@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+    char myChar;
+    int myInt;
+    float myFloat;
+    double myDouble;
+    scanf(" %c %d %f %lf", &myChar, &myInt, &myFloat, &myDouble);
+    printf("%c %d %.2f %.6lf\n", myChar, myInt, myFloat, myDouble);
+
+    return 0;
+
+}
