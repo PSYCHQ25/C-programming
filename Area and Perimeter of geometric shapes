@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    const float PI = 3.1416;
+
+    
+    float radius, circle_area, circle_perimeter;
+
+    
+    float side, square_area, square_perimeter;
+
+    
+    float length, width, rectangle_area, rectangle_perimeter;
+
+   
+
+    
+    scanf("%f", &radius);
+
+   
+    scanf("%f", &side);
+
+    
+    scanf("%f %f", &length, &width);
+
+   
+
+    
+    circle_area = PI * radius * radius;
+    circle_perimeter = 2 * PI * radius;
+
+    
+    square_area = side * side;
+    square_perimeter = 4 * side;
+
+    
+    rectangle_area = length * width;
+    rectangle_perimeter = 2 * (length + width);
+
+    
+
+    printf("Circle: %.2f %.2f\n", circle_area, circle_perimeter);
+    printf("Square: %.2f %.2f\n", square_area, square_perimeter);
+    printf("Rectangle: %.2f %.2f\n", rectangle_area, rectangle_perimeter);
+   
+    return 0;
+}
