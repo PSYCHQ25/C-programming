@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+   int base, exponent;
+    
+    
+    double result;
+
+   
+    scanf("%d %d", &base, &exponent);
+
+    
+    result = pow(base, exponent);
+
+   
+    printf("%.0f\n", result);
+   
+    return 0;
+}
