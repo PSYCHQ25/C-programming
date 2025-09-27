@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    int english, mathematics, science, computer, history;
+
+    
+    int total_marks;
+    float average_marks, percentage;
+
+   
+    scanf("%d %d %d %d %d", &english, &mathematics, &science, &computer, &history);
+
+   
+    total_marks = english + mathematics + science + computer + history;
+
+    average_marks = (float)total_marks / 5;
+    
+    
+    percentage = (float)total_marks / 500 * 100;
+
+    
+    printf("%d %.2f %.2f\n", total_marks, average_marks, percentage);
+
+    return 0;
+}
