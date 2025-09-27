@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int p,t;
+    float a,r,interest;
+    scanf("%d%f%d",&p,&r,&t);
+    a=p* pow(1+(r/100),t);
+    interest=a-p;
+    printf("%.2f",interest);
+    return 0;
+}
