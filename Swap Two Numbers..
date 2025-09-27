@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+ int riyas_number, amans_number;
+
+   
+    scanf("%d %d", &riyas_number, &amans_number);
+
+    // Sw
+    riyas_number = riyas_number + amans_number;
+    amans_number = riyas_number - amans_number;
+    riyas_number = riyas_number - amans_number;
+
+    
+    printf("%d %d\n", riyas_number, amans_number);
+
+    return 0;
+}
