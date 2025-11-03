@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int main() {
+    int R, C;
+    int arr[100][100]; 
+
+    
+    scanf("%d %d", &R, &C);
+
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    for (int i = 0; i < R; i++) {
+        int sum = 0; 
+        for (int j = 0; j < C; j++) {
+            sum += arr[i][j];
+        }
+        printf("%d\n", sum); 
+    }
+
+    return 0;
+}
+
+
+
