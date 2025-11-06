@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int main() {
+    char S[1001];
+    if (fgets(S, sizeof(S), stdin) == NULL) {
+        return 0;
+    }
+
+    int uppercase = 0;
+    int lowercase = 0;
+
+    for (int i = 0; S[i] != '\0'; i++) {
+        char ch = S[i];
+        if (ch >= 'A' && ch <= 'Z') {
+            uppercase++;
+        } else if (ch >= 'a' && ch <= 'z') {
+            lowercase++;
+        }
+       
+    }
+
+    printf("%d %d\n", uppercase, lowercase);
+    return 0;
+}
