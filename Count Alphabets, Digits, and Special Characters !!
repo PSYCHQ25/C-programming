@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char S[1001];            
+    if (fgets(S, sizeof(S), stdin) == NULL) {
+        return 0;
+    }
+
+    
+    size_t len = strlen(S);
+    if (len > 0 && S[len-1] == '\n') {
+        S[len-1] = '\0';
+    }
+
+    int countAlpha = 0;
+    int countDigit = 0;
+    int countSpecial = 0;
+
+    for (int i = 0; S[i] != '\0'; i++) {
+        char ch = S[i];
+        if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
+            countAlpha++;
+        } else if (ch >= '0' && ch <= '9') {
+            countDigit++;
+        } else {
+            countSpecial++;
+        }
+    }
+
+    printf("%d %d %d\n", countAlpha, countDigit, countSpecial);
+    return 0;
+}
+
