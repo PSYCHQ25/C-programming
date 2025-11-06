@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char S[1001];
+    if (fgets(S, sizeof(S), stdin) == NULL) {
+        return 0;   
+    }
+
+    
+    size_t len = strlen(S);
+    if (len > 0 && S[len-1] == '\n') {
+        S[len-1] = '\0';
+    }
+
+    int vowelCount = 0;
+    int consonantCount = 0;
+
+    for (int i = 0; S[i] != '\0'; i++) {
+        char ch = S[i];
+        if (isalpha((unsigned char)ch)) {
+            char lower = tolower((unsigned char)ch);
+            if (lower == 'a' || lower == 'e' || lower == 'i' || lower == 'o' || lower == 'u') {
+                vowelCount++;
+            } else {
+                consonantCount++;
+            }
+        }
+       
+    }
+
+    printf("%d %d\n", vowelCount, consonantCount);
+    return 0;
+}
+
+
+
