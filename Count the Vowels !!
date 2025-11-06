@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char S[1001];       
+    if (fgets(S, sizeof(S), stdin) == NULL) {
+        return 0;
+    }
+
+    int count = 0;
+    for (int i = 0; S[i] != '\0'; i++) {
+        char ch = S[i];
+        if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'
+         || ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            count++;
+        }
+    }
+
+    printf("%d\n", count);
+    return 0;
+}
+
+    
