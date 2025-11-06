@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char S[2001];
+    if (fgets(S, sizeof(S), stdin) == NULL) {
+        return 0;
+    }
+
+    size_t len = strlen(S);
+    if (len > 0 && S[len-1] == '\n') {
+        S[len-1] = '\0';
+        len--;
+    }
+
+    int wordCount = 0;
+    int inWord = 0;  
+
+    for (size_t i = 0; i < len; i++) {
+        if (isalpha((unsigned char)S[i])) {
+            if (!inWord) {
+                
+                wordCount++;
+                inWord = 1;
+            }
+            
+        } else {
+           
+            inWord = 0;
+        }
+    }
+
+    printf("%d\n", wordCount);
+    return 0;
+}
