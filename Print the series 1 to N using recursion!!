@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void printSeries(int n, int current) {
+    if (current > n) {
+        return; 
+    }
+    printf("%d ", current);      
+    printSeries(n, current + 1); 
+}
+
+int main() {
+    int N;
+    printf("Enter a number N: ");
+    scanf("%d", &N);
+
+    printSeries(N, 1);
+    printf("/n");
+    return 0;
+}
