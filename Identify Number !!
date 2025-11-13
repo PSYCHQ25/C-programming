@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <stdbool.h>
+
+
+bool isArmstrong(int num) {
+    int original = num;
+    int digits = 0, sum = 0, temp = num;
+
+    
+    while (temp > 0) {
+        digits++;
+        temp /= 10;
+    }
+
+    
+    temp = num;
+    while (temp > 0) {
+        int digit = temp % 10;
+        sum += pow(digit, digits);
+        temp /= 10;
+    }
+
+    return (sum == original);
+}
+
+
+bool isPrime(int num) {
+    if (num < 2)
+        return false;
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0)
+            return false;
+    }
+    return true;
+}
+
+
+bool isPerfect(int num) {
+    if (num <= 1)
+        return false;
+
+    int sum = 0;
+    for (int i = 1; i <= num / 2; i++) {
+        if (num % i == 0)
+            sum += i;
+    }
+    return (sum == num);
+}
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    if (isArmstrong(num))
+        printf("Armstrong Number");
+    else if (isPrime(num))
+        printf("Prime Number");
+    else if (isPerfect(num))
+        printf("Perfect Number");
+    else
+        printf("None of these");
+
+    return 0;
+}
