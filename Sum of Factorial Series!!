@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+
+long long factorial(int num) {
+    long long fact = 1;
+    for (int i = 1; i <= num; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+
+long long sumOfFactorials(int n) {
+    long long sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += factorial(i);
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+    
+    
+    scanf("%d", &n);
+    
+   
+    long long result = sumOfFactorials(n);
+    printf("%lld\n", result);
+    
+    return 0;
+}
